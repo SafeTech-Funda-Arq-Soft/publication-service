@@ -1,0 +1,30 @@
+package com.api.safetech.publicationservice.publication.resource;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Getter
+@Setter
+public class UpdatePublicationResource {
+    @NotNull
+    @NotBlank
+    @Size(max = 150)
+    private String title;
+
+    @NotNull
+    @NotBlank
+    @Size(max = 250)
+    private String description;
+
+    @NotNull
+    @NotBlank
+    private String urlImage;
+
+    @NotNull
+    private Integer technicalId;
+
+}
